@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "storeapi-dio"
+version = "0.1.0"
+description = ""
+authors = ["RTDavi <davi.gmramos@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.111.1"
+motor = "^3.5.1"
+pytest = "^8.2.2"
+pytest-asyncio = "^0.23.7"
+uvicorn = "^0.24.0.post1"
+pydantic = "^2.8.2"
+pydantic-settings = "^2.3.4"
+pre-commit = "^3.7.1"
+httpz = "^0.25.1"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = [
+  "--strict-config",
+  "--strict-markers",
+  "--ignore=docs_src",
+]
+xfail_strict = true
+junit_family = "xunit2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
